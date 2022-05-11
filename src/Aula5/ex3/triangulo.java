@@ -9,11 +9,20 @@ public class triangulo {
         this.lado3 = l3;
     }
 
-    public static Boolean value(double raio){
+    public static Boolean values(double lado1, double lado2, double lado3){
         boolean valid = false;
-        if(l1>0 && l2>0 && l3>0){
-            valid = true;
-        }
-        return valid;
+		if((lado1+lado2 > lado3)&&(lado1+lado3 > lado2)&&(lado2+lado3 > lado1)){
+			valid = true;
+		}
+		return valid;
     }
+
+    public double perimetro () {
+		return lado1 + lado2 + lado3;
+	}
+	
+	public double area() {
+		double s = perimetro() / 2;
+		return Math.sqrt(s * (s-lado1) * (s-lado2) * (s-lado3));
+	}
 }
