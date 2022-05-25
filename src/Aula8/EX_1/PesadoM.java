@@ -19,6 +19,6 @@ public class PesadoM extends Pesado{
 
     @Override
     public String toString(){
-        return "\nPesado de Mercadorias -\n" + super.toString() + "\tNúmero máximo de carga = " + maxC;
+        return "--- Pesado de Mercadorias ---\n" .concat(super.toString()) + "Número máximo de carga = " + maxC + "\n";
     }
 }

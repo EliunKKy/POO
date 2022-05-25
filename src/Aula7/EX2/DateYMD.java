@@ -1,6 +1,6 @@
 package Aula7.EX2;
 
-public class DateYMD extends Date {
+public class DateYMD extends Data {
     public int dia, mes, ano;
     
     public void setDate(int dia, int mes, int ano){
@@ -97,7 +97,7 @@ public class DateYMD extends Date {
 
     @Override
     public int decrementDatee(int dia, int mes, int ano) {
-        // TODO Auto-generated method stub
+        //  Auto-generated method stub
         return 0;
     }
 }

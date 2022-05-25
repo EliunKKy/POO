@@ -18,6 +18,6 @@ public class PesadoP extends Pesado {
 
     @Override
     public String toString(){
-        return "\nPesado de Passgeiros -\n \tNúmero máximo de passageiros = " + maxP + ",".concat(super.toString());
+        return "--- Pesado de Passgeiros ---\n" .concat(super.toString()) + "Número máximo de passageiros = " + maxP + "\n";
     }
 }

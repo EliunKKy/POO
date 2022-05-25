@@ -7,7 +7,7 @@ public class Menu {
         int d = 0, m = 0,a = 0;
         Scanner sc = new Scanner(System.in);
         DateYMD date = new DateYMD();
-        DateND dataa = new DateND();
+        DateND dataa = new DateND(a, a, a);
 
         do{
             

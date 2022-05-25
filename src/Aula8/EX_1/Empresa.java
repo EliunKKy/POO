@@ -1,26 +1,19 @@
 package Aula8.EX_1;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Empresa {
-    private String nome, zip; 
-    static Veiculo[] veiculos = new Veiculo[5];
+    private String nome, zip, email;
+    private Veiculo[] veiculos; 
+   
     
 
-    public empresa(String nome, String zip, String email, Veiculo[] veiculos){
+    public Empresa(String nome, String zip, String email, Veiculo[] veiculos){
         this.nome = nome;
         this.zip = zip;
         this.email = email;
         this.veiculos = veiculos;
-    }
-
-    public String dados(String nome, String zip, String email){
-        String dados[] = new String[3];
-        dados[0] = nome;
-        dados[1] = zip;
-        dados[2] = email;
-
-        String s = "Nome da empresa: " + dados[0] + "\nCódigo postal: " + dados[1] + "\nE-mail: " + dados[2];
-
-        return s;
     }
 
     // comparar distâncias ------------------------------------
@@ -28,10 +21,9 @@ public class Empresa {
     public String[] CompararD(){
         int max = 0;
         String matricula = "";
-        Stinrg marca = "";
+        String marca = "";
         String modelo = "";
-        String[] maxDistance = new String[5];
-
+        String[] maxDistance = new String[4];
 
         for(int i = 0; i < veiculos.length; i++){
             
@@ -51,42 +43,45 @@ public class Empresa {
         maxDistance[2] = modelo;
         maxDistance[3] = Integer.toString(max);
 
-        return max;
+        return maxDistance;
     }
 
     // lista de veiculos ------------------------------------
 
-    public static Veiculo[] listaVeiculos(){
-        
-
-        veiculos[0] = new Motociclo( "Honda", "CBR 1000 RR", 217, "desportivo").setMatricula("00-AA-00");
-        veiculos[1] = new Ligeiro("Audi", "A6", 326, 100, 250).setMatricula("00-BB-00");
-        veiculos[2] = new Taxi("Volkswagen", "Beetle", 168, 201, 300, 405).setMatricula("00-FF-54");
-        veiculos[3] = new PesadoP("Mercedes", "Citaro", 299 , 200, 1000, 50).setMatricula("00-00-CC");
-        veiculos[4] = new PesadoM("Volvo", "FH", 540, 202, 3000, 500).setMatricula("90-EA-54");
-
-        return veiculos;
-    }
-
-    
-
     public String printVeiculos(){
-        Veiculo[] veiculos = listaVeiculos();
         String s = "";
         for(int i = 0; i < veiculos.length; i++){
             s += veiculos[i].toString() + "\n";
         }
-
         return s;
     }
 
     // getters & setters -------------------------------------
+    
+
+    public String getEmail(){
+        return email;
+    }
+
+
+    public Empresa setEmail(String email){
+        if (email != null && email.length() > 0) {
+            String expression = "^[\\w\\.-_]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
+            Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
+            Matcher matcher = pattern.matcher(email);
+            if (matcher.matches()) {
+            }else{
+                System.out.println("Email Inválido!");
+            }
+        }
+        return this;
+    } 
 
     public String getNome(){
         return nome;
     }
 
-    public void setNome(Stirng nome){
+    public void setNome(String nome){
         this.nome = nome;
     }
 

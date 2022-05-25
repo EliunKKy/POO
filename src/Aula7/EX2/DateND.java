@@ -1,8 +1,14 @@
 package Aula7.EX2;
 
-public class DateND extends Date {
+public class DateND extends Data {
     public int dia, mes, ano;
     
+    public DateND(int dia, int mes, int ano){
+        this.dia = dia;
+        this.mes = mes;
+        this.ano = ano;
+    }
+
     public void setDate(int dia, int mes, int ano){
         this.dia = dia;
         this.mes = mes;
@@ -58,37 +64,37 @@ public class DateND extends Date {
 
     @Override
     public Boolean validMonth(int m) {
-        // TODO Auto-generated method stub
+        //  Auto-generated method stub
         return null;
     }
 
     @Override
     public Boolean leapYear(int a) {
-        // TODO Auto-generated method stub
+        //  Auto-generated method stub
         return null;
     }
 
     @Override
     public Boolean validDate(int d, int m, int a) {
-        // TODO Auto-generated method stub
+        //  Auto-generated method stub
         return null;
     }
 
     @Override
     public String printt() {
-        // TODO Auto-generated method stub
+        //  Auto-generated method stub
         return null;
     }
 
     @Override
     public void incrementDate() {
-        // TODO Auto-generated method stub
+        //  Auto-generated method stub
         
     }
 
     @Override
     public void decrementDate() {
-        // TODO Auto-generated method stub
+        //  Auto-generated method stub
         
     }
 }

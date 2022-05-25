@@ -15,11 +15,17 @@ public class Date {
         this.ano = ano;
     }
     
-    public int getDia() {return dia;}
+    public int getDia() {
+        return dia;
+    }
     
-    public int getMes() {return mes;}
+    public int getMes() {
+        return mes;
+    }
     
-    public int getAno() {return ano;}
+    public int getAno() {
+        return ano;
+    }
 
     public static Boolean validMonth(int m){
         boolean valid = false;
@@ -28,6 +34,7 @@ public class Date {
         }
         return valid;
     }
+
     public static int monthDays(int m, int a){
         int dias;
         switch (m){
@@ -55,6 +62,7 @@ public class Date {
         }
         return valid;
     }
+
     public static Boolean validDate(int d, int m, int a){
         boolean valid = false;
         if(d>0 && d<=monthDays(m, a)){
@@ -62,6 +70,7 @@ public class Date {
         }
         return valid;
     }
+    
     public String printt() {
         if(Boolean.TRUE.equals(validMonth(this.mes)) && Boolean.TRUE.equals(validDate(this.dia, this.mes, this.ano)))
             return String.format("%02d/%02d/%04d", this.dia, this.mes, this.ano);

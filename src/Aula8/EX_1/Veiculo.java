@@ -74,7 +74,7 @@ public abstract class Veiculo implements KmPercorridosInterface{
 
     @Override
     public String toString() {
-        return " " + "Matricula = " + matricula + ", Marca = " + marca + ", Modelo = " + modelo + ", Potencia = " + potencia + ", Último Trajeto = " + quilometros + "km " + ", Distancia total = " + distancia + "km. ";
+        return " " + "Matricula = " + matricula + ", Marca = " + marca + ", Modelo = " + modelo + ", Potencia = " + potencia + ", Último Trajeto = " + ultimoTrajeto() + "km " + ", Distancia total = " + distanciaTotal() + "km, ";
 
     }
     

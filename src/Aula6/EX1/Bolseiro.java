@@ -1,6 +1,6 @@
 package Aula6.EX1;
 
-import java.nio.channels.AlreadyBoundException;
+
 
 public class Bolseiro extends Aluno{
     private int bolsa;

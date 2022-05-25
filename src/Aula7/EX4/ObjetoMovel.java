@@ -1,4 +1,4 @@
-package Aula7.EX3;
+package Aula7.EX4;
 
 public abstract class ObjetoMovel {
     private int x, y, dist = 0;

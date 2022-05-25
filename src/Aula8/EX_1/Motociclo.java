@@ -22,6 +22,6 @@ public class Motociclo extends Veiculo{
 
     @Override
     public String toString(){
-        return "\nMotociclo -\n \tTipo = " + tipo + ",".concat(super.toString());
+        return "\n--- Motociclo --- \n".concat(super.toString()) + "Tipo: " + tipo + "\n";
     }
 }

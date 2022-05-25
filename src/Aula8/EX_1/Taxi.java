@@ -21,6 +21,6 @@ public class Taxi extends Ligeiro{
 
     @Override
     public String toString(){
-        return "\nTaxi -\n \tNúmero licença = " + lic + ",".concat(super.toString());
+        return "\n( Taxi )" .concat(super.toString()) + ", Número licença = " + lic + "\n";
     }
 }

@@ -1,6 +1,6 @@
 package Aula7.EX2;
 
-public abstract class Date {
+public abstract class Data {
     public abstract Boolean validMonth(int m);
     public abstract int monthDays(int m, int a);
     public abstract Boolean leapYear(int a);

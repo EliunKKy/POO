@@ -27,7 +27,7 @@ public class Ligeiro extends Veiculo{
 
     @Override
     public String toString(){
-        return  "\nAutomóvel ligeiro:\n" + super.toString() + "\tNúmero de quadro = " + nrQuadro + ", Capaciade de bagagem = " + bag;
+        return  "--- Ligeiro ---\n" .concat(super.toString()) + "Número de quadro = " + nrQuadro + ", Capaciade de bagagem = " + bag ;
     }
 
     
