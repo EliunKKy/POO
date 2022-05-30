@@ -58,8 +58,8 @@ public abstract class Veiculo implements KmPercorridosInterface{
 
     @Override
     public void trajeto(int quilometros) {
-        this.quilometros = quilometros;
         distancia += quilometros;
+        this.quilometros = quilometros;
     }
 
     @Override

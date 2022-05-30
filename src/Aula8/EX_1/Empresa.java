@@ -1,5 +1,6 @@
 package Aula8.EX_1;
 
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -18,7 +19,7 @@ public class Empresa {
 
     // comparar distâncias ------------------------------------
 
-    public String[] CompararD(){
+    public String CompararD(){
         int max = 0;
         String matricula = "";
         String marca = "";
@@ -26,6 +27,10 @@ public class Empresa {
         String[] maxDistance = new String[4];
 
         for(int i = 0; i < veiculos.length; i++){
+
+            if(veiculos[i].distanciaTotal() == 0){
+                continue;
+            }
             
             if(veiculos[i].distanciaTotal() >= max){
                 max = veiculos[i].distanciaTotal();
@@ -38,12 +43,12 @@ public class Empresa {
             }
         }
 
-        maxDistance[0] = matricula;
-        maxDistance[1] = marca;
-        maxDistance[2] = modelo;
-        maxDistance[3] = Integer.toString(max);
-
-        return maxDistance;
+        maxDistance[0] = marca;
+        maxDistance[1] = modelo;
+        maxDistance[2] = matricula;
+        maxDistance[3] = Integer.toString(max) + "km";
+        
+        return Arrays.toString(maxDistance);
     }
 
     // lista de veiculos ------------------------------------
@@ -103,6 +108,6 @@ public class Empresa {
 
     @Override
     public String toString() {
-        return printVeiculos();
+        return "Nome: " + nome + ", Código Postal: " + zip + ", Email: " + email;
     }
 }
