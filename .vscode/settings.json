@@ -3,5 +3,22 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
-    ]
+    ],
+    "workbench.activityBar.visible": true,
+    "workbench.sideBar.location": "left",
+    "workbench.statusBar.visible": true,
+    "workbench.tips.enabled": true,
+    "breadcrumbs.enabled": false,
+    "breadcrumbs.icons": true,
+    "breadcrumbs.symbolPath": "on",
+    "workbench.editor.decorations.badges": true,
+    "workbench.editor.languageDetectionHints": {},
+    "workbench.editor.scrollToSwitchTabs": true,
+    "workbench.editor.showIcons": false,
+    "workbench.settings.enableNaturalLanguageSearch": true,
+    "explorer.decorations.badges": true,
+    "diffEditor.renderIndicators": true,
+    "diffEditor.wordWrap": "inherit",
+    "editor.suggest.filterGraceful": true,
+    "editor.suggest.showClasses": true
 }
