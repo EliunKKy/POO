@@ -1,3 +1,5 @@
+package Aula11.poo_ex.poo_ex;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -27,9 +29,9 @@ public class VideoClub {
 
     public void listRentals() throws FileNotFoundException {
 
-        for (Person p : random) {
-            System.out.println(random(p).toString() + random.get(p));
-        }
+        // for (Person p : random) {
+        //     System.out.println(random(p).toString() + random.get(p));
+        // }
 
     }
 

@@ -2,7 +2,6 @@ package Aula10;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.WatchEvent;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;

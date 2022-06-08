@@ -1,4 +1,4 @@
-
+package Aula11.poo_ex.poo_ex;
 public class Person{
     private String nome;
     private int cc;
