@@ -2,7 +2,9 @@ package Aula10;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.WatchEvent;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class EX4 {
@@ -22,21 +24,41 @@ public class EX4 {
             }
             
             // c)
-            char c = word.charAt(word.length() -1);
-            String chr = String.valueOf(c);
-            if (chr == "s" || chr == "S"){
+            String chr = String.valueOf(word.charAt(word.length() -1));
+            if (chr.equals("s") || chr.equals("S")){
                 s.add(word);
             }
         }
 
+        // c)
+        System.out.println("\n-----------------------------------------------------\n");
+        for (String word : s) {
+            System.out.print(word + "\n");
+        }
 
         System.out.println("\n-----------------------------------------------------\n");
-        System.out.println(s);
-
-        for (String w : s) {
-            System.out.println(w);
+        for (String word : two) {
+            System.out.print(word + "\n");
         }
         
+
+        // d)
+        Iterator<String> it = two.iterator();
+        while(it.hasNext()){
+            String i = it.next();
+            for (int c = 0; c < i.length(); c++){
+                if (!Character.isLetter(i.charAt(c))){ 
+                    it.remove(); 
+                    break;
+                }
+            }
+        }
+        
+        
+        System.out.println("\n-----------------------------------------------------\n");
+        for (String word : two) {
+            System.out.print(word + "\n");
+        }
     }
         
 }
