@@ -4,48 +4,56 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.Set;
+
 
 public class EX1 {
     public static void main(String[] args) throws IOException{
-        Scanner input = new Scanner(new FileReader("words.txt"));
-        List<String> lst = new ArrayList<String>();           
-
+        Scanner input = new Scanner(new FileReader("major.txt"));
+        Map<String, HashMap<String, Integer>> par = new HashMap<>();        
+        List<String> lst = new ArrayList<>(); 
     
-        while(input.hasNext()){
-            
-            String word = input.next();
-            if(word.length() > 2){
-                lst.add(word);
+        // remove unwanted characters and adding words to ArrayList
+        while(input.hasNextLine()){
+            String line = input.nextLine();
+            line = line.replaceAll("[\t\n.,:'‘’;?!\\-*{}=+&/()\\[\\]”“\"\']", "");
+            String[] words = line.trim().split("[\s]+");
+
+            for(int i = 0; i < words.length; i++){
+                if (words[i].length() > 2){
+                    lst.add(words[i]);
+                }
             }
         }
 
-        System.out.println(lst + "\n");
-
         for(int i = 0; i < lst.size(); i++){
-            Map<String, Integer> oc = new HashMap<>();
-            String key = lst.get(i);
 
             if(i == 0) continue;
-            String s = key + lst.get(i-1);
 
-            oc.put(key, 0);
+            HashMap<String, Integer> oc = new HashMap<>();   // create a hashmap to be a value
+            String key = lst.get(i-1);
+            String next = lst.get(i);
 
-            for (int n = 0; n < lst.size(); n++){
-
-                if(n == 0) {continue;}
-                String st = lst.get(n) + lst.get(n-1);
-
-                if(st.equals(s)){
-                    oc.put(key, oc.get(key) + 1);
+            if(!par.containsKey(key)){           // Add keys
+                oc.put(next, 1);           
+                par.put(key, oc);                 // add values                           
+            } else{
+                if(!par.get(key).containsKey(next)){     // add values to existing keys
+                    par.get(key).put(next, 1);
+                    par.put(key, par.get(key));
+                } else{
+                    par.get(key).put(next, par.get(key).get(next) + 1);   // changing values for existing keys
+                    par.put(key, par.get(key));
                 }
             }
+            
+        }
 
-            System.out.println(lst.get(i-1) + " = " + oc);
+        // print result 
+        for (String w : par.keySet()) {
+            System.out.println(w + " = " + par.get(w));
         }
         
         

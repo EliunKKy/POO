@@ -1,0 +1,6 @@
+Hora	Voo	Origem	Atraso
+00:50	TP 1944	Lisboa	
+07:00	AEA1147	Madrid	
+07:35	IB 8720	Madrid	00:25
+07:35	TO 3408	Paris, Orly	
+07:40	FR 5451	Faro	
