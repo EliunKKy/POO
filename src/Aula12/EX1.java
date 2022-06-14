@@ -9,9 +9,9 @@ import java.util.Scanner;
 
 public class EX1 {
     public static void main(String[] args) throws IOException{
-        Scanner input = new Scanner(new FileReader("src/Aula12/file.txt"));   
-        List<String> lst = new ArrayList<>(); 
-        List<String> dw= new ArrayList<>(); 
+        Scanner input = new Scanner(new FileReader("file.txt"));   //src/Aula12/file.txt
+        List<String> lst = new ArrayList<>();  // words list
+        List<String> dw = new ArrayList<>();    // diferent words only list
         int count = 0;
         int dif = 0;
     
@@ -29,7 +29,7 @@ public class EX1 {
         for (int i = 0; i < lst.size(); i++) {
             count++;
 
-            int occurrences = Collections.frequency(lst, lst.get(i));
+            int occurrences = Collections.frequency(lst, lst.get(i));  // discover the repeated words using frequency method
             if(occurrences > 1){
                 if(!dw.contains(lst.get(i))){
                     dw.add(lst.get(i));

@@ -1,7 +1,2 @@
-oi
-ou
-oi
-ou
-oi
-ol
-or
+Escreva um programa que leia um ficheiro de texto à sua escolha e que conte o número de 
+palavras diferentes existentes.
