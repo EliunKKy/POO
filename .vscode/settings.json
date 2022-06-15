@@ -20,5 +20,6 @@
     "diffEditor.renderIndicators": true,
     "diffEditor.wordWrap": "inherit",
     "editor.suggest.filterGraceful": true,
-    "editor.suggest.showClasses": true
+    "editor.suggest.showClasses": true,
+    "editor.inlayHints.enabled": "off"
 }
