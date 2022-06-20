@@ -1,4 +1,4 @@
-package Aula12.EX2;
+package Aula12;
 
 import java.io.FileReader;
 import java.io.IOException;
