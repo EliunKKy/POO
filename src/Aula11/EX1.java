@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class EX1 {
     public static void main(String[] args) throws IOException{
-        Scanner input = new Scanner(new FileReader("major.txt"));
+        Scanner input = new Scanner(new FileReader("src/Aula11/major.txt"));
         Map<String, HashMap<String, Integer>> par = new HashMap<>();        
         List<String> lst = new ArrayList<>(); 
     

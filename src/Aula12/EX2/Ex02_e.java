@@ -6,18 +6,6 @@ import java.io.*;
 public class Ex02_e {
     public static void main(String[] args) {
 
-        //  Janela Inicial
-        System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
-        System.out.println("┃                             ┃");
-        System.out.println("┃            TP_12            ┃");
-        System.out.println("┃                             ┃");
-        System.out.println("┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫");
-        System.out.println("┃                             ┃");
-        System.out.println("┃    Resultado do programa:   ┃");
-        System.out.println("┃                             ┃");
-        System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
-        System.out.println("");
-
 
         ArrayList<Movie> moviesArray = new ArrayList<Movie>();
 
