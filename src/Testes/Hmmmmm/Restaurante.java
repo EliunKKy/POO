@@ -1,4 +1,4 @@
-package Hmmmmm;
+package Testes.Hmmmmm;
 
 public class Restaurante extends Organizacao{
     private String nome;

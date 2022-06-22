@@ -1,4 +1,4 @@
-package Hmmmmm;
+package Testes.Hmmmmm;
 
 public class Organizacao {
     private String telefone;

@@ -13,7 +13,8 @@ public class Electrodomestico extends Produto {
 		super("E", preco);
 		this.tipo = tipo;
 		this.marca = marca;
-		this.modelo = modelo;
+		this.modelo = modelo; 
+		
 		this.potencia = potencia;
 	}
 	

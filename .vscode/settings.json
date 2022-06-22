@@ -21,5 +21,6 @@
     "diffEditor.wordWrap": "inherit",
     "editor.suggest.filterGraceful": true,
     "editor.suggest.showClasses": true,
-    "editor.inlayHints.enabled": "off"
+    "editor.inlayHints.enabled": "off",
+    "chaliceIcons.showArrows": true
 }
